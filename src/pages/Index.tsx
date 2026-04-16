@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Heart, Sparkles } from "lucide-react";
+import { Heart, Sparkles, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import FloatingHearts from "@/components/FloatingHearts";
 import LoveCounter from "@/components/LoveCounter";
@@ -13,7 +13,6 @@ import ch3 from "@/assets/chapter-3.jpg";
 import ch4 from "@/assets/chapter-4.jpg";
 import ch5 from "@/assets/chapter-5.jpg";
 
-// Free, hotlinkable demo songs (royalty-free piano). Replace with your own audio anytime.
 const SONG_PIANO_1 =
   "https://cdn.pixabay.com/download/audio/2022/05/27/audio_1808fbf07a.mp3?filename=relaxing-piano-music-115960.mp3";
 const SONG_PIANO_2 =
@@ -109,53 +108,74 @@ const Index = () => {
   };
 
   return (
-    <main className="relative min-h-screen overflow-x-hidden">
-      <FloatingHearts count={stage === "landing" ? 24 : 14} />
+    <main className="relative min-h-[100dvh] overflow-x-hidden">
+      {/* Animated background blobs */}
+      <div className="pointer-events-none fixed inset-0 overflow-hidden -z-10">
+        <div className="absolute -top-32 -left-20 w-72 h-72 sm:w-96 sm:h-96 rounded-full bg-primary/20 blur-3xl animate-blob" />
+        <div className="absolute top-1/3 -right-24 w-72 h-72 sm:w-96 sm:h-96 rounded-full bg-accent/25 blur-3xl animate-blob" style={{ animationDelay: "3s" }} />
+        <div className="absolute bottom-0 left-1/3 w-72 h-72 sm:w-[28rem] sm:h-[28rem] rounded-full bg-primary-glow/20 blur-3xl animate-blob" style={{ animationDelay: "6s" }} />
+      </div>
+
+      <FloatingHearts count={stage === "landing" ? 18 : 10} />
 
       {stage === "landing" && (
         <section
-          className="relative min-h-screen flex flex-col items-center justify-center px-4 py-12 z-10"
+          className="relative min-h-[100dvh] flex flex-col items-center justify-center px-5 py-10 z-10 pt-safe pb-safe"
           style={{
-            backgroundImage: `linear-gradient(180deg, hsl(var(--background) / 0.4), hsl(var(--background) / 0.85)), url(${heroBg})`,
+            backgroundImage: `linear-gradient(180deg, hsl(var(--background) / 0.55), hsl(var(--background) / 0.92)), url(${heroBg})`,
             backgroundSize: "cover",
             backgroundPosition: "center",
           }}
         >
-          <div className="text-center max-w-3xl animate-fade-in-up">
-            <div className="flex justify-center mb-6">
-              <Sparkles className="w-6 h-6 text-accent animate-sparkle" />
-              <Heart className="w-12 h-12 text-primary fill-primary mx-3 animate-heartbeat drop-shadow-lg" />
-              <Sparkles className="w-6 h-6 text-accent animate-sparkle" style={{ animationDelay: "1s" }} />
+          <div className="text-center max-w-3xl animate-fade-in-up w-full">
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full glass mb-6 sm:mb-8">
+              <Sparkles className="w-3.5 h-3.5 text-accent" />
+              <span className="text-xs font-medium tracking-wider uppercase text-foreground/70">Uma história de amor</span>
+              <Sparkles className="w-3.5 h-3.5 text-accent" />
             </div>
 
-            <h1 className="font-serif-romance text-4xl sm:text-6xl md:text-7xl font-semibold leading-tight text-gradient-rose animate-shimmer">
-              Você acha que com um simples olhar,
-              <br />
-              <span className="font-script text-5xl sm:text-7xl md:text-8xl">pode apaixonar alguém?</span>
+            <div className="flex justify-center mb-5 sm:mb-6">
+              <div className="relative">
+                <div className="absolute inset-0 bg-primary/40 blur-2xl rounded-full animate-pulse" />
+                <Heart className="relative w-16 h-16 sm:w-20 sm:h-20 text-primary fill-primary animate-heartbeat drop-shadow-2xl" />
+              </div>
+            </div>
+
+            <h1 className="font-serif-romance text-[2.25rem] leading-[1.05] sm:text-6xl md:text-7xl font-medium text-foreground/90 tracking-tight">
+              Você acha que com{" "}
+              <span className="italic text-gradient-rose animate-shimmer">um simples olhar</span>,
+              <br className="hidden sm:block" />
+              <span className="font-script font-semibold text-5xl sm:text-7xl md:text-8xl text-gradient-aurora animate-gradient block mt-2">
+                pode apaixonar alguém?
+              </span>
             </h1>
 
-            <p className="mt-6 text-lg sm:text-xl text-foreground/80 italic font-serif-romance">
+            <p className="mt-6 sm:mt-8 text-base sm:text-xl text-foreground/70 italic font-serif-romance max-w-md mx-auto">
               Esta é a nossa história, contada em capítulos.
             </p>
 
-            <div className="mt-10">
+            <div className="mt-8 sm:mt-10">
               <Button
                 onClick={start}
-                className="rounded-full bg-gradient-rose hover:opacity-90 shadow-romance text-base sm:text-lg px-8 py-7 font-semibold transition-bounce hover:scale-105"
+                className="rounded-full bg-gradient-rose hover:opacity-95 shadow-romance text-sm sm:text-base px-7 sm:px-9 py-6 sm:py-7 h-auto font-semibold transition-bounce hover:scale-105 active:scale-95 w-full sm:w-auto max-w-sm"
               >
-                Clique aqui e descubra essa história de amor ❤️
+                Descubra essa história ❤️
               </Button>
+              <p className="mt-4 text-xs text-muted-foreground flex items-center justify-center gap-1.5">
+                <ChevronDown className="w-3 h-3 animate-bounce" />
+                Role para ver mais
+              </p>
             </div>
           </div>
 
-          <div className="mt-16 sm:mt-20 w-full max-w-3xl">
+          <div className="mt-12 sm:mt-20 w-full max-w-3xl">
             <LoveCounter />
           </div>
         </section>
       )}
 
       {stage === "chapter" && (
-        <section className="relative z-10 min-h-screen flex items-center">
+        <section className="relative z-10 min-h-[100dvh] flex items-center pt-safe pb-safe">
           <ChapterScene
             chapter={chapters[chapterIdx]}
             index={chapterIdx}
@@ -168,7 +188,7 @@ const Index = () => {
       )}
 
       {stage === "proposal" && (
-        <section className="relative z-10 min-h-screen flex items-center">
+        <section className="relative z-10 min-h-[100dvh] flex items-center pt-safe pb-safe">
           <ProposalScene
             onBack={() => {
               setChapterIdx(chapters.length - 1);

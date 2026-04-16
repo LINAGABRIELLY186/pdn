@@ -1,6 +1,5 @@
 import { useEffect, useRef, useState } from "react";
 import { Pause, Play, Music } from "lucide-react";
-import { Button } from "@/components/ui/button";
 
 interface MusicPlayerProps {
   src: string;
@@ -35,21 +34,20 @@ const MusicPlayer = ({ src, title, artist }: MusicPlayerProps) => {
   };
 
   return (
-    <div className="flex items-center gap-3 bg-white/70 backdrop-blur-sm rounded-full pl-2 pr-4 py-2 shadow-soft border border-primary/10">
-      <Button
+    <div className="flex items-center gap-3 glass rounded-full pl-1.5 pr-4 py-1.5 shadow-card w-full sm:w-auto">
+      <button
         type="button"
         onClick={toggle}
-        size="icon"
-        className="rounded-full bg-gradient-rose hover:opacity-90 shadow-romance h-10 w-10"
+        className="rounded-full bg-gradient-rose hover:opacity-90 shadow-romance h-11 w-11 flex items-center justify-center text-primary-foreground shrink-0 transition-bounce active:scale-90"
         aria-label={playing ? "Pausar música" : "Tocar música"}
       >
         {playing ? <Pause className="w-4 h-4" /> : <Play className="w-4 h-4 ml-0.5" />}
-      </Button>
-      <div className="flex items-center gap-2 min-w-0">
-        <Music className="w-4 h-4 text-primary shrink-0" />
+      </button>
+      <div className="flex items-center gap-2 min-w-0 flex-1">
+        <Music className={`w-4 h-4 text-primary shrink-0 ${playing ? "animate-pulse" : ""}`} />
         <div className="flex flex-col min-w-0">
-          <span className="text-sm font-medium truncate">{title}</span>
-          {artist && <span className="text-xs text-muted-foreground truncate">{artist}</span>}
+          <span className="text-sm font-semibold truncate leading-tight">{title}</span>
+          {artist && <span className="text-[11px] text-muted-foreground truncate">{artist}</span>}
         </div>
       </div>
       <audio ref={audioRef} src={src} loop preload="none" />
