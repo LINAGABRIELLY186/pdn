@@ -6,50 +6,50 @@
 
 @layer base {
   :root {
-    /* Modern romantic palette — warm rose, blush, champagne gold, cream */
-    --background: 348 100% 98%;
-    --foreground: 345 35% 15%;
+    /* Editorial palette — deep bordeaux, champagne, ivory, muted gold */
+    --background: 30 30% 97%;          /* ivory / off-white */
+    --foreground: 350 25% 12%;         /* near-black with warm tint */
 
-    --card: 0 0% 100%;
-    --card-foreground: 345 35% 15%;
+    --card: 30 25% 99%;
+    --card-foreground: 350 25% 12%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 345 35% 15%;
+    --popover: 30 25% 99%;
+    --popover-foreground: 350 25% 12%;
 
-    --primary: 346 78% 56%;
-    --primary-foreground: 350 100% 99%;
-    --primary-glow: 338 92% 72%;
+    --primary: 350 55% 28%;            /* deep bordeaux */
+    --primary-foreground: 30 30% 97%;
+    --primary-glow: 350 45% 42%;
 
-    --secondary: 350 80% 96%;
-    --secondary-foreground: 345 55% 28%;
+    --secondary: 30 20% 92%;           /* warm sand */
+    --secondary-foreground: 350 25% 18%;
 
-    --muted: 345 35% 96%;
-    --muted-foreground: 345 15% 48%;
+    --muted: 30 18% 94%;
+    --muted-foreground: 350 8% 38%;
 
-    --accent: 38 80% 62%;
-    --accent-foreground: 345 40% 18%;
-    --accent-glow: 42 92% 76%;
+    --accent: 35 35% 55%;              /* muted antique gold */
+    --accent-foreground: 30 30% 97%;
+    --accent-glow: 38 45% 68%;
 
-    --destructive: 0 84% 60%;
-    --destructive-foreground: 0 0% 100%;
+    --destructive: 0 60% 45%;
+    --destructive-foreground: 30 30% 97%;
 
-    --border: 345 50% 92%;
-    --input: 345 50% 94%;
-    --ring: 346 78% 56%;
+    --border: 30 18% 88%;
+    --input: 30 18% 90%;
+    --ring: 350 55% 28%;
 
-    --radius: 1.5rem;
+    --radius: 0.75rem;
 
-    --gradient-romance: radial-gradient(ellipse at top, hsl(348 100% 96%) 0%, hsl(340 75% 90%) 45%, hsl(350 80% 94%) 100%);
-    --gradient-rose: linear-gradient(135deg, hsl(346 82% 58%) 0%, hsl(338 92% 72%) 100%);
-    --gradient-gold: linear-gradient(135deg, hsl(38 80% 62%) 0%, hsl(42 92% 76%) 100%);
-    --gradient-sunset: linear-gradient(180deg, hsl(350 100% 96%) 0%, hsl(340 90% 86%) 50%, hsl(20 85% 82%) 100%);
-    --gradient-aurora: linear-gradient(135deg, hsl(346 78% 56%) 0%, hsl(320 70% 60%) 50%, hsl(38 80% 62%) 100%);
+    --gradient-romance: linear-gradient(180deg, hsl(30 30% 97%) 0%, hsl(28 25% 94%) 60%, hsl(25 22% 91%) 100%);
+    --gradient-rose: linear-gradient(135deg, hsl(350 55% 28%) 0%, hsl(350 45% 38%) 100%);
+    --gradient-gold: linear-gradient(135deg, hsl(35 35% 55%) 0%, hsl(38 45% 68%) 100%);
+    --gradient-sunset: linear-gradient(180deg, hsl(30 30% 96%) 0%, hsl(28 25% 90%) 50%, hsl(25 22% 86%) 100%);
+    --gradient-aurora: linear-gradient(135deg, hsl(350 55% 28%) 0%, hsl(350 35% 35%) 50%, hsl(35 35% 55%) 100%);
 
-    --shadow-romance: 0 24px 60px -20px hsl(346 78% 56% / 0.45);
-    --shadow-soft: 0 12px 40px -12px hsl(345 60% 60% / 0.22);
-    --shadow-gold: 0 12px 40px -12px hsl(38 80% 62% / 0.45);
-    --shadow-glow: 0 0 80px hsl(338 92% 72% / 0.55);
-    --shadow-card: 0 8px 32px -8px hsl(345 50% 50% / 0.18);
+    --shadow-romance: 0 20px 50px -20px hsl(350 55% 18% / 0.35);
+    --shadow-soft: 0 10px 30px -12px hsl(350 30% 20% / 0.18);
+    --shadow-gold: 0 10px 30px -12px hsl(35 35% 45% / 0.30);
+    --shadow-glow: 0 0 60px hsl(350 45% 42% / 0.25);
+    --shadow-card: 0 8px 28px -10px hsl(350 30% 20% / 0.15);
 
     --transition-romance: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55);
