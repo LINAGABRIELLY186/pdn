@@ -109,11 +109,11 @@ const Index = () => {
 
   return (
     <main className="relative min-h-[100dvh] overflow-x-hidden">
-      {/* Animated background blobs */}
+      {/* Subtle background texture */}
       <div className="pointer-events-none fixed inset-0 overflow-hidden -z-10">
-        <div className="absolute -top-32 -left-20 w-72 h-72 sm:w-96 sm:h-96 rounded-full bg-primary/20 blur-3xl animate-blob" />
-        <div className="absolute top-1/3 -right-24 w-72 h-72 sm:w-96 sm:h-96 rounded-full bg-accent/25 blur-3xl animate-blob" style={{ animationDelay: "3s" }} />
-        <div className="absolute bottom-0 left-1/3 w-72 h-72 sm:w-[28rem] sm:h-[28rem] rounded-full bg-primary-glow/20 blur-3xl animate-blob" style={{ animationDelay: "6s" }} />
+        <div className="absolute -top-32 -left-20 w-72 h-72 sm:w-96 sm:h-96 rounded-full bg-primary/5 blur-3xl animate-blob" />
+        <div className="absolute top-1/3 -right-24 w-72 h-72 sm:w-96 sm:h-96 rounded-full bg-accent/8 blur-3xl animate-blob" style={{ animationDelay: "3s" }} />
+        <div className="absolute bottom-0 left-1/3 w-72 h-72 sm:w-[28rem] sm:h-[28rem] rounded-full bg-primary/5 blur-3xl animate-blob" style={{ animationDelay: "6s" }} />
       </div>
 
       <FloatingHearts count={stage === "landing" ? 18 : 10} />
