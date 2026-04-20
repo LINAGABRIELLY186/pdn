@@ -89,7 +89,7 @@ const ProposalScene = ({ onBack }: { onBack: () => void }) => {
         >
           💖 Sim
         </Button>
-        <Button
+       <Button
           onMouseEnter={dodgeNo}
           onFocus={dodgeNo}
           onClick={dodgeNo}
@@ -98,7 +98,8 @@ const ProposalScene = ({ onBack }: { onBack: () => void }) => {
             transform: noPos ? `translate(${noPos.x}px, ${noPos.y}px)` : undefined,
             transition: "transform 0.35s cubic-bezier(0.68,-0.55,0.27,1.55)",
           }}
-          className="rounded-full border-black text-black px-5 sm:px-7 h-12 hover:bg-secondary text-xs sm:text-sm whitespace-nowrap"
+          // Adicionei hover:text-black e forcei a borda a ficar visível
+          className="rounded-full border-black text-black px-5 sm:px-7 h-12 text-xs sm:text-sm whitespace-nowrap bg-transparent hover:bg-slate-100 hover:text-black"
         >
           {NO_MESSAGES[noIndex]}
         </Button>
