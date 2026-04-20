@@ -6,60 +6,64 @@ import LoveCounter from "@/components/LoveCounter";
 import ChapterScene, { Chapter } from "@/components/ChapterScene";
 import ProposalScene from "@/components/ProposalScene";
 
-import heroBg from "@/assets/hero-bg.jpg";
-import ch1 from "@/assets/chapter-1.jpg";
-import ch2 from "@/assets/chapter-2.jpg";
-import ch3 from "@/assets/chapter-3.jpg";
-import ch4 from "@/assets/chapter-4.jpg";
-import ch5 from "@/assets/chapter-5.jpg";
+import heroBg from "@/assets/hero-nos.png";
+import ch1 from "@/assets/chapter-1.jpeg";
+import ch2 from "@/assets/chapter-2.png";
+import ch3 from "@/assets/chapter-3.png";
+import ch4 from "@/assets/chapter-4.jpeg";
+import ch5 from "@/assets/chapter-5.jpeg";
 
 const SONG_PIANO_1 =
-  "https://cdn.pixabay.com/download/audio/2022/05/27/audio_1808fbf07a.mp3?filename=relaxing-piano-music-115960.mp3";
+  "/music/pagode.mp4";
 const SONG_PIANO_2 =
-  "https://cdn.pixabay.com/download/audio/2022/10/18/audio_31ab6cc0e0.mp3?filename=romantic-piano-122802.mp3";
+  "/music/greys anatomy.mp4";
 const SONG_PIANO_3 =
-  "https://cdn.pixabay.com/download/audio/2023/06/19/audio_6e06f0f66b.mp3?filename=piano-moment-153657.mp3";
+  "/music/justin bieber.mp4";
+const SONG_PIANO_4 =
+  "/music/panda.mp4";
+const SONG_PIANO_5 =
+  "/music/sotam.mp4";
 
 const chapters: Chapter[] = [
   {
     title: "Como tudo começou",
     subtitle: "Capítulo I",
     text:
-      "Foi num dia comum que tudo mudou. Um olhar, um sorriso tímido, e o mundo já não cabia mais dentro de mim. Quem diria que ali começaria a história mais linda da minha vida?",
+      "Desde a primeira vez que te vi, seus olhos me prenderam de um jeito único. Desde então, não consegui mais pensar em outra coisa além de você e da forma como costumo dizer: 'seus lindos olhos que parecem olhos de gato'. Desde aquele instante, você mexe comigo por completo, e até hoje continua transformando meus dias.",
     image: ch1,
-    music: { src: SONG_PIANO_1, title: "Nosso primeiro olhar", artist: "Piano suave" },
+    music: { src: SONG_PIANO_1, title: "Nosso música", artist: "Piano suave" },
   },
   {
     title: "Nosso primeiro momento especial",
     subtitle: "Capítulo II",
     text:
-      "Lembro de cada detalhe. O som da sua risada, o jeito que seus olhos brilhavam, o silêncio confortável entre nós. Foi ali que entendi: contigo, até o tempo respira diferente.",
+      "Lembro-me como se fosse hoje: minhas mãos suavam, o coração disparado, aquele frio na barriga que não me deixava pensar direito. As palavras simplesmente sumiram da minha boca. Então veio o nosso primeiro beijo — e ele despertou algo em mim que até hoje não consigo explicar. O encaixe foi perfeito, como se estivéssemos destinados a aquele instante. Desde aquele dia, durmo e acordo pensando em você. Nunca imaginei que aquele momento seria uma verdadeira virada de chave na minha vida, mas foi. E desde então, tudo ganhou um novo sentido ao seu lado.",
     image: ch2,
-    music: { src: SONG_PIANO_2, title: "Caminhando contigo", artist: "Trilha do nosso filme" },
+    music: { src: SONG_PIANO_2, title: "oq eu diria pra voce", artist: "Trilha do nosso filme" },
   },
   {
     title: "Quando percebi que era você",
     subtitle: "Capítulo III",
     text:
-      "Não foi um trovão, foi uma certeza calma. Aquele instante em que percebi que você não era só especial — você era o lugar onde meu coração queria morar.",
+      "A sua energia é diferente de tudo o que já vi na vida. O seu sorriso alegra o meu dia e a leveza com que você encara a vida, mesmo diante dos dias difíceis, me encanta. O jeito que você me abraça e diz que é a minha mulher fez com que eu finalmente entendesse o que é o amor. As pessoas sempre dizem que a gente sente quando encontra a pessoa certa; eu confesso que duvidei, mas sobre você eu sempre tive a certeza de que era para mim. Este é o amor que eu tanto esperei — e é muito melhor do que eu jamais imaginei.",
     image: ch3,
-    music: { src: SONG_PIANO_3, title: "Pequenos detalhes", artist: "Memórias em piano" },
+    music: { src: SONG_PIANO_3, title: "justin", artist: "Memórias em piano" },
   },
   {
     title: "Momentos inesquecíveis",
     subtitle: "Capítulo IV",
     text:
-      "Cada dança, cada abraço, cada noite de luzes e risadas. Você transformou momentos comuns em memórias que eu quero reviver pra sempre.",
+      "Todos os momentos ao seu lado são mágicos e únicos. É como se eu te conhecesse há mil anos e você soubesse exatamente do que eu gosto. Esta foto retrata um momento muito importante: a nossa primeira viagem. Conhecer as suas raízes me fez entender que quero descobrir cada detalhe da sua história. Quero aprender tudo o que você gosta — e o que não gosta também. Quero ser quem conhece aquilo que você não tem coragem de dizer a mais ninguém, além de viver momentos inesquecíveis ao seu lado. Afinal, com você, tudo é mais gostoso de sentir.",
     image: ch4,
-    music: { src: SONG_PIANO_1, title: "Sob as luzes", artist: "Nossa noite" },
+    music: { src: SONG_PIANO_4, title: "eu te seguro", artist: "Nossa noite" },
   },
   {
     title: "O que você significa pra mim",
     subtitle: "Capítulo V",
     text:
-      "Você é meu lar, minha calmaria e minha aventura favorita. É a primeira pessoa que penso ao acordar e o último sorriso antes de dormir. Você é, simplesmente, tudo.",
+    "Como você sabe, desde a primeira vez, eu tive a certeza de que você era a mulher da minha vida. Sonho em me casar com você e construir uma linda história de amor ao seu lado. Sonho também em ter você como a mãe dos meus filhos. Te admiro muito como mulher, irmã e, principalmente, como ser humano. Você tem um coração enorme — e pessoas assim estão escassas no mundo. Eu não poderia deixar essa oportunidade passar: quero ter você para o resto da minha vida; quero viver e envelhecer ao seu lado. Você me faz um bem danado e a gente se encaixa bonitinho demais. Obrigado por reviver as borboletas no meu estômago e por me amar tanto assim. Tenho muito orgulho de ter alguém tão incrível ao meu lado. E, por favor... pense direito ao responder à próxima pergunta.",
     image: ch5,
-    music: { src: SONG_PIANO_2, title: "Pra sempre", artist: "Você + eu" },
+    music: { src: SONG_PIANO_5, title: "Foi assim", artist: "Você + eu" },
   },
 ];
 

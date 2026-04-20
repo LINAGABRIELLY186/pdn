@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Heart } from "lucide-react";
 
-const START_DATE = new Date("2024-12-25T00:00:00");
+const START_DATE = new Date("2025-12-25T00:00:00");
 
 const calc = () => {
   const now = new Date();
