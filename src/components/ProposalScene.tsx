@@ -98,7 +98,7 @@ const ProposalScene = ({ onBack }: { onBack: () => void }) => {
             transform: noPos ? `translate(${noPos.x}px, ${noPos.y}px)` : undefined,
             transition: "transform 0.35s cubic-bezier(0.68,-0.55,0.27,1.55)",
           }}
-          className="rounded-full border-primary/30 text-foreground/60 px-5 sm:px-7 h-12 hover:bg-secondary text-xs sm:text-sm whitespace-nowrap"
+          className="rounded-full border-black text-black px-5 sm:px-7 h-12 hover:bg-secondary text-xs sm:text-sm whitespace-nowrap"
         >
           {NO_MESSAGES[noIndex]}
         </Button>
